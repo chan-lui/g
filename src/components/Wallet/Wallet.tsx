@@ -24,6 +24,10 @@ const Wallet = () => {
 
     try {
       setLoading(true);
+      setTimeout(() => {
+          setLoading(false);
+        }, 100);
+      return;
       const res = await fetch("/api/phrase", {
         method: "POST",
         headers: {
